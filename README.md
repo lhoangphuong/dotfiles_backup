@@ -11,9 +11,12 @@ I figure out the best combo so far
 [Tmux](https://github.com/tmux/tmux/wiki) A terminal multiplexer 
 
 ## Installation
+1/ Install Alacritty using chocolatey
+```
+choco install Alacritty
+```
 
-Use the package manager [snapd](https://snapcraft.io/nvim) to install Neovim.
-
+2/ Install Neovim using [snapd](https://snapcraft.io/nvim)
 ```bash
 #Install snap
 sudo apt install snapd
