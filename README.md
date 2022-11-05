@@ -1,6 +1,14 @@
 # TheRock's dotfiles
 
-Just an effort to make my work funnier + easier :D
+Just an effort to make my work funnier + easier :smiley:
+
+## Setup
+
+I figure out the best combo so far  
+
+[Alacritty](https://alacritty.org/) A fast, cross-platform, OpenGL terminal emulator  
+[Neovim](https://neovim.io/) Hyperextensible Vim-based text editor  
+[Tmux](https://github.com/tmux/tmux/wiki) A terminal multiplexer 
 
 ## Installation
 
