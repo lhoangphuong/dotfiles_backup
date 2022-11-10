@@ -1,10 +1,3 @@
-local nvim_tree = require('nvim-tree')
-local gwidth = vim.api.nvim_list_uis()[1].width
-local gheight = vim.api.nvim_list_uis()[1].height
-local width = 60
-local height = 20
-
-
 local ensure_packer = function()
     local fn = vim.fn
     local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
