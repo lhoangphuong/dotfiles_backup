@@ -33,10 +33,27 @@ sudo snap install --classic nvim
 ```
 
 ## Usage
-
-Very simple, init everything using [chezmoi](https://www.chezmoi.io/)
+#### Very simple, init everything using [chezmoi](https://www.chezmoi.io/)
 ```bash
+#Install/Init chezmoi the first time
 sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply lhoangphuong
+
+#Updating your dotfiles on any machine is a single command
+./bin/chezmoi update
+```
+
+#### To push new dotfiles to git
+```bash
+#Open a shell in the source chezmoi directory
+./bin/chezmoi cd
+
+#Sync the changes
+rsync -avuh  ~/.config/nvim ./dot_config
+
+#Commit your changes
+git add .
+git commit -m "update dotfiles"
+git push
 ```
 
 ## Contributing
