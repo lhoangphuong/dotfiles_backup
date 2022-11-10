@@ -1,6 +1,7 @@
 --[[ keys.lua ]]
 local map = vim.api.nvim_set_keymap
 local telescope_map = vim.keymap.set
+local builtin = require('telescope.builtin')
 
 --[[
 Example:
@@ -19,6 +20,6 @@ Parameters:
 map('n', '`', [[:NvimTreeToggle<CR>]], {})          -- press "`" in normal mode to open file explorer 
 
 
-local builtin = require('telescope.builtin')
+
 telescope_map('n', '<leader>f', builtin.find_files, {})  -- leader is map to "\" by default
 telescope_map('n', '<leader>g', builtin.live_grep, {})
