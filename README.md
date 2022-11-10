@@ -8,6 +8,7 @@ I figure out the best combo so far
 
 [Neovim](https://neovim.io/) Hyperextensible Vim-based text editor  
 [Tmux](https://github.com/tmux/tmux/wiki) A terminal multiplexer 
+[Chezmoi](https://www.chezmoi.io/) Manage dotfiles across multiple diverse machines, securely  
 
 ## Installation
 
