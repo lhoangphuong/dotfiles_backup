@@ -26,8 +26,9 @@ sudo snap install --classic nvim
 
 ## Usage
 
+Very simple, init everything using [chezmoi](https://www.chezmoi.io/)
 ```bash
-To be added
+sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply lhoangphuong
 ```
 
 ## Contributing
