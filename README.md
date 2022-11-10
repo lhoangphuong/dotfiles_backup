@@ -6,7 +6,7 @@ Just an effort to make my work funnier + easier :smiley:
 
 I figure out the best combo so far  
 
-[Neovim](https://neovim.io/) Hyperextensible Vim-based text editor  
+[Neovim](https://neovim.io/) Hyperextensible Vim-based text editor  r
 [Tmux](https://github.com/tmux/tmux/wiki) A terminal multiplexer 
 [Chezmoi](https://www.chezmoi.io/) Manage dotfiles across multiple diverse machines, securely  
 
