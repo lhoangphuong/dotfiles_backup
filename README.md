@@ -12,7 +12,15 @@ I figure out the best combo so far
 
 ## Installation
 
-Install Neovim using [snapd](https://snapcraft.io/nvim)
+#### Install Neovim using Debian Package
+```bash
+#Download stable Debian Package
+wget https://github.com/neovim/neovim/releases/download/stable/nvim-linux64.deb
+
+#Install the package
+sudo apt install ./nvim-linux64.deb
+```
+#### Or install Neovim using [snapd](https://snapcraft.io/nvim)
 ```bash
 #Install snap
 sudo apt install snapd
@@ -22,7 +30,6 @@ grep -qxF 'export PATH="$PATH:/snap/bin"' ~/.zshrc || echo 'export PATH="$PATH:/
 
 #Install latest Neovim with snap
 sudo snap install --classic nvim
-
 ```
 
 ## Usage
