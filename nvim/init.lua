@@ -5,4 +5,4 @@ require('keys')         -- lua/keys.lua
 
 
 -- Plugins list
-require('nvim_tree')`
+require('nvim_tree')
