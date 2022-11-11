@@ -19,6 +19,9 @@ wget https://github.com/neovim/neovim/releases/download/stable/nvim-linux64.deb
 
 #Install the package
 sudo apt install ./nvim-linux64.deb
+
+#Optional - install ripgrep to use with Telescope
+sudo apt install ripgrep
 ```
 #### Or install Neovim using [snapd](https://snapcraft.io/nvim)
 ```bash
@@ -30,6 +33,9 @@ grep -qxF 'export PATH="$PATH:/snap/bin"' ~/.zshrc || echo 'export PATH="$PATH:/
 
 #Install latest Neovim with snap
 sudo snap install --classic nvim
+
+#Optional - install ripgrep to use with Telescope
+sudo apt install rip grep
 ```
 
 ## Usage
