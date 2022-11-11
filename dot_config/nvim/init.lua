@@ -4,6 +4,7 @@ require('plugins_config.telescope') -- Plugin with many dependency load second :
 require('plugins_config.nvim_tree')
 require('plugins_config.lualine')
 require('plugins_config.bufferline')
+require('plugins_config.nvim-treesitter')
 
 
 -- Sytem wide config
