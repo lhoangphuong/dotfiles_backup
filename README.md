@@ -35,7 +35,7 @@ grep -qxF 'export PATH="$PATH:/snap/bin"' ~/.zshrc || echo 'export PATH="$PATH:/
 sudo snap install --classic nvim
 
 #Optional - install ripgrep to use with Telescope
-sudo apt install rip grep
+sudo apt install ripgrep
 ```
 
 ## Usage
