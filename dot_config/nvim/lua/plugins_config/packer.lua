@@ -16,21 +16,41 @@ return require('packer').startup(function(use)
   -- My plugins installation here
 
     -- Themes
-    use({ 'Mofiqul/vscode.nvim', as = 'vscode', config = function() end })
-    use({ 'rose-pine/neovim', as = 'rose-pine', config = function() end })
+    use({ 
+      'Mofiqul/vscode.nvim', as = 'vscode', 
+      config = function() end 
+    })
+    use({ 
+      'rose-pine/neovim', as = 'rose-pine', 
+      config = function() end 
+    })
 
     -- File explorer
-    use { 'nvim-tree/nvim-tree.lua', requires = { 'nvim-tree/nvim-web-devicons' }}
+    use { 
+      'nvim-tree/nvim-tree.lua', 
+      requires = { 'nvim-tree/nvim-web-devicons' }
+    }
 
     -- Status line
-    use { 'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true }}
+    use { 
+      'nvim-lualine/lualine.nvim', 
+      requires = { 'kyazdani42/nvim-web-devicons', opt = true 
+    }}
 
     -- Tab line
-    use { 'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons' }
+    use { 
+      'akinsho/bufferline.nvim', tag = "v3.*", 
+      requires = 'nvim-tree/nvim-web-devicons' 
+    }
 
     -- Dashboard
     use {'glepnir/dashboard-nvim'}
 
+    -- Telescope
+    use {
+      'nvim-telescope/telescope.nvim', tag = '0.1.0',
+      requires = { {'nvim-lua/plenary.nvim'} }
+    }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
