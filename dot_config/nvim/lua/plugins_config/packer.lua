@@ -43,18 +43,10 @@ return require('packer').startup(function(use)
       requires = 'nvim-tree/nvim-web-devicons' 
     }
 
-    -- Dashboard
-    use {'glepnir/dashboard-nvim'}
-
     -- Telescope
     use {
       'nvim-telescope/telescope.nvim',
       requires = { {'nvim-lua/plenary.nvim'} }
-    }
-
-    -- Treesitter
-    use {
-      'nvim-treesitter/nvim-treesitter'
     }
 
   -- Automatically set up your configuration after cloning packer.nvim
