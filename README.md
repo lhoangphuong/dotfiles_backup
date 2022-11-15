@@ -3,15 +3,22 @@
 Just an effort to make my work funnier + easier :smiley:
 
 ## Setup
-
-I figure out the best combo so far  
-
 [Neovim](https://neovim.io/) Hyperextensible Vim-based text editor  
 [Tmux](https://github.com/tmux/tmux/wiki) A terminal multiplexer  
-[Chezmoi](https://www.chezmoi.io/) Manage dotfiles across multiple diverse machines, securely
 
 ## Installation
 
+#### Install Neovim from source
+```bash
+#Get Build prerequisites
+sudo apt-get install ninja-build gettext libtool libtool-bin autoconf automake cmake g++ pkg-config unzip curl doxygen
+
+#Clone the source code
+git clone --depth 1 --branch stable https://github.com/neovim/neovim.git
+
+#Optional - install ripgrep to use with Telescope
+sudo apt install ripgrep
+```
 #### Install Neovim using Debian Package
 ```bash
 #Download stable Debian Package
