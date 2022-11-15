@@ -16,6 +16,10 @@ sudo apt-get install ninja-build gettext libtool libtool-bin autoconf automake c
 #Clone the source code
 git clone --depth 1 --branch stable https://github.com/neovim/neovim.git
 
+#Compile
+make CMAKE_BUILD_TYPE=Release
+sudo make install
+
 #Optional - install ripgrep to use with Telescope
 sudo apt install ripgrep
 ```
