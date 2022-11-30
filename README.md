@@ -50,27 +50,20 @@ sudo apt install ripgrep
 ```
 
 ## Usage
-#### Very simple, init everything using [chezmoi](https://www.chezmoi.io/)
+#### To sync dotfiles from remote to local
 ```bash
-#Install/Init chezmoi the first time
-sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply lhoangphuong
-
-#Updating your dotfiles on any machine is a single command
-./bin/chezmoi update
+#Sync the changes
+mkdir -p ~/.config/nvim
+rsync -avuh --delete ./dot_config/nvim ~/.config
 ```
 
-#### To push new dotfiles to git
+#### How to use the Windows clipboard from WSL?
 ```bash
-#Open a shell in the source chezmoi directory
-./bin/chezmoi cd
-
-#Sync the changes
-rsync -avuh  ~/.config/nvim ./dot_config
-
-#Commit your changes
-git add .
-git commit -m "update dotfiles"
-git push
+#If Neovim is only installed within our WSL distribution, we can just install win32yank.exe manually:
+curl -sLo/tmp/win32yank.zip https://github.com/equalsraf/win32yank/releases/download/v0.0.4/win32yank-x64.zip
+unzip -p /tmp/win32yank.zip win32yank.exe > /tmp/win32yank.exe
+chmod +x /tmp/win32yank.exe
+sudo mv /tmp/win32yank.exe /usr/local/bin/
 ```
 
 ## Contributing
@@ -80,3 +73,5 @@ Please make sure to update tests as appropriate.
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
+
+
