@@ -6,6 +6,28 @@ Just an effort to make my work funnier + easier :smiley:
 [Neovim](https://neovim.io/) Hyperextensible Vim-based text editor  
 [Tmux](https://github.com/tmux/tmux/wiki) A terminal multiplexer  
 
+## Folder structure
+```
+dotfiles/dot_config
+└── nvim
+    ├── init.lua
+    └── lua
+        ├── bootstrap
+        │   ├── install_packer.lua
+        │   └── install_plugin.lua
+        ├── global_configs
+        │   ├── keys.lua
+        │   └── settings.lua
+        └── plugin_configs
+            ├── code_completion.lua
+            ├── file_explorer.lua
+            ├── fuzzy_finder.lua
+            ├── lsp.lua
+            ├── statusline.lua
+            ├── tabline.lua
+            └── theme.lua
+```
+
 ## Installation
 
 #### Install Neovim from source
