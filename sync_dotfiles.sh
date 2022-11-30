@@ -16,12 +16,12 @@ sync_remote_local() {
 }
 
 sync_local_remote() {
-  rsync -avuh --delete ~/.config ./dot_config/nvim
+  rsync -avuh --delete ~/.config/nvim ./dot_config/nvim
 }
 
 basic_select() {
   PS3="Select your action please: "
-  
+
   select action in sync_remote_local sync_local_remote Quit
   do
     case $action in
