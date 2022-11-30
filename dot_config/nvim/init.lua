@@ -10,6 +10,7 @@ require 'plugin_configs.tabline'
 require 'plugin_configs.statusline'
 require 'plugin_configs.fuzzy_finder'
 require 'plugin_configs.lsp'
+require 'plugin_configs.code_completion'
 
 
 -- [ ~/.config/nvim/lua/global_configs ]
