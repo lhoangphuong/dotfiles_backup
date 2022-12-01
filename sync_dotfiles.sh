@@ -12,7 +12,7 @@ check_nvim() {
 }
 
 sync_remote_local() {
-  rsync -avuh --delete ~/.config/nvim ./dot_config/nvim
+  rsync -avuh --delete ./dot_config/nvim/ ~/.config/nvim
 }
 
 sync_local_remote() {
