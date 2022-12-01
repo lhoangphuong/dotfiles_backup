@@ -15,17 +15,22 @@ Parameters:
 - {opts} Optional parameters map: keys are :map-arguments, values are booleans (default false).
 
 ]]--
+-- General nvim key-map
+map('n', '<C-/>', [[:noh<CR>]], {})                               -- press "Ctrl" + "/" to turn off last search hightlight
 
 -- Toggle nvim-tree
 map('n', '`', [[:NvimTreeFocus<CR>]], {})                         -- press "\" + "`" in normal mode to open/focus file explorer 
 map('n', '<leader>`', [[:NvimTreeFindFileToggle!<CR>]], {})       -- press "`" to toggle file explorer
 
--- Toggle terminal
-map('n', '<leader>t', [[:ToggleTerm<CR>]], {})
-
 -- Switch between buffer
-map('n', '<leader>1', [[:bprevious<CR>]], {})                     -- press "\" + "1" to move to previous buffer
-map('n', '<leader>2', [[:bnext<CR>]], {})                         -- press "\" + "2" to move to next buffer
+map('n', '<C-Left>', [[:bprevious<CR>]], {})                      -- press "Ctrl" + "<-" to move to previous buffer
+map('n', '<C-Right>', [[:bnext<CR>]], {})                         -- press "Ctrl" + "->" to move to next buffer
 
-telescope_map('n', '<leader>f', builtin.find_files, {})           -- leader is map to "\" by default
-telescope_map('n', '<leader>g', builtin.live_grep, {})
+-- Close/Re-open buffer
+map('n', '<C-d>', [[:bd<CR>]], {})                                -- press "Ctrl" + "d" close buffer
+                                                                  -- press "Ctrl" + "o" re-open buffer 
+
+-- Telescope
+telescope_map('n', '<leader>t', builtin.commands, {})             -- press "\" + "t" to open Telescope and Lists available commands
+telescope_map('n', '<leader>f', builtin.find_files, {})           -- find file
+telescope_map('n', '<leader>g', builtin.live_grep, {})            -- find anything
