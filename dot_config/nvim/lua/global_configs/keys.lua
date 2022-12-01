@@ -17,9 +17,15 @@ Parameters:
 ]]--
 
 -- Toggle nvim-tree
-map('n', '`', [[:NvimTreeToggle<CR>]], {})          -- press "`" in normal mode to open file explorer 
+map('n', '`', [[:NvimTreeFocus<CR>]], {})                         -- press "\" + "`" in normal mode to open/focus file explorer 
+map('n', '<leader>`', [[:NvimTreeFindFileToggle!<CR>]], {})       -- press "`" to toggle file explorer
 
+-- Toggle terminal
+map('n', '<leader>t', [[:ToggleTerm<CR>]], {})
 
+-- Switch between buffer
+map('n', '<leader>1', [[:bprevious<CR>]], {})                     -- press "\" + "1" to move to previous buffer
+map('n', '<leader>2', [[:bnext<CR>]], {})                         -- press "\" + "2" to move to next buffer
 
-telescope_map('n', '<leader>f', builtin.find_files, {})  -- leader is map to "\" by default
+telescope_map('n', '<leader>f', builtin.find_files, {})           -- leader is map to "\" by default
 telescope_map('n', '<leader>g', builtin.live_grep, {})
