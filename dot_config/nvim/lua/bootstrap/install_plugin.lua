@@ -1,4 +1,3 @@
-
 return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
@@ -7,7 +6,11 @@ return require('packer').startup(function(use)
   use 'Mofiqul/vscode.nvim' 
   use 'rose-pine/neovim'
   use 'folke/tokyonight.nvim'
-    
+  use 'morhetz/gruvbox'
+  use 'projekt0n/github-nvim-theme'
+  use 'catppuccin/nvim'
+
+
   -- file_explorer
   use {
     'nvim-tree/nvim-tree.lua',
@@ -35,19 +38,27 @@ return require('packer').startup(function(use)
     'nvim-telescope/telescope.nvim', tag = '0.1.0',
     requires = { 'nvim-lua/plenary.nvim' }
   }
-  
-  -- lsp
-  use 'neovim/nvim-lspconfig'
 
-  -- code_completion
+  -- treesitter
+  use 'nvim-treesitter/nvim-treesitter'
+
+  --  code completion
   use 'hrsh7th/cmp-nvim-lsp'
-  -- use 'hrsh7th/cmp-buffer'
-  -- use 'hrsh7th/cmp-path'
-  -- use 'hrsh7th/cmp-cmdline'
-  -- use 'hrsh7th/nvim-cmp'
-  -- -- For vsnip users.
-  -- use 'hrsh7th/cmp-vsnip'
-  -- use 'hrsh7th/vim-vsnip'
+  use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/cmp-path'
+  use 'hrsh7th/cmp-cmdline'
+  use 'hrsh7th/nvim-cmp'
+
+  -- For vsnip users.
+  use 'hrsh7th/cmp-vsnip'
+  use 'hrsh7th/vim-vsnip'
+
+  -- lsp_installer
+  use {
+    'williamboman/mason.nvim',
+    'williamboman/mason-lspconfig.nvim',
+    'neovim/nvim-lspconfig', --lsp
+  }
 
   -- terminal
   use {

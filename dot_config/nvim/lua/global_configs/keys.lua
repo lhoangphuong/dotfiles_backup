@@ -31,6 +31,6 @@ map('n', '<C-d>', [[:bd<CR>]], {})                                -- press "Ctrl
                                                                   -- press "Ctrl" + "o" re-open buffer 
 
 -- Telescope
-telescope_map('n', '<leader>t', builtin.commands, {})             -- press "\" + "t" to open Telescope and Lists available commands
+telescope_map('n', '<leader>t', [[:Telescope<CR>]], {})           -- press "\" + "t" to open Telescope and Lists available commands
 telescope_map('n', '<leader>f', builtin.find_files, {})           -- find file
 telescope_map('n', '<leader>g', builtin.live_grep, {})            -- find anything

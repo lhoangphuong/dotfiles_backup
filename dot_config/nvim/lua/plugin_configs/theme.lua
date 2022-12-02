@@ -35,4 +35,4 @@ require("tokyonight").setup({
   })
 
 -- set colorscheme after options
-vim.cmd('colorscheme tokyonight')
+vim.cmd('colorscheme catppuccin')
