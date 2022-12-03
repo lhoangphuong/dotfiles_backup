@@ -25,5 +25,11 @@ echo "Here is the log" >> ./logfile.log'''
       }
     }
 
+    stage('Artifact') {
+      steps {
+        archiveArtifacts '*'
+      }
+    }
+
   }
 }
