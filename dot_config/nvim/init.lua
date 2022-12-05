@@ -12,6 +12,7 @@ require 'plugin_configs.fuzzy_finder'
 require 'plugin_configs.terminal'
 require 'plugin_configs.lsp.lsp_installer'
 require 'plugin_configs.lsp.lsp'
+require 'plugin_configs.lsp.dap'
 require 'plugin_configs.lsp.code_completion'
 
 

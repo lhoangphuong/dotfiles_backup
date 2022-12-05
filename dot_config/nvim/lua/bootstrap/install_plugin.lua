@@ -3,7 +3,7 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
   -- theme
-  use 'Mofiqul/vscode.nvim' 
+  use 'Mofiqul/vscode.nvim'
   use 'rose-pine/neovim'
   use 'folke/tokyonight.nvim'
   use 'morhetz/gruvbox'
@@ -21,9 +21,9 @@ return require('packer').startup(function(use)
   }
 
   -- tabline
-  use { 
-    'akinsho/bufferline.nvim', 
-    tag = "v3.*", 
+  use {
+    'akinsho/bufferline.nvim',
+    tag = "v3.*",
     requires = 'nvim-tree/nvim-web-devicons'
   }
 
@@ -60,9 +60,12 @@ return require('packer').startup(function(use)
     'neovim/nvim-lspconfig', --lsp
   }
 
+  -- dap
+  use 'mfussenegger/nvim-dap'
+
   -- terminal
   use {
-    'akinsho/toggleterm.nvim', 
+    'akinsho/toggleterm.nvim',
     tag = '*'
   }
 

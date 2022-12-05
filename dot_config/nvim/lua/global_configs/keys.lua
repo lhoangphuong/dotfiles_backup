@@ -20,7 +20,7 @@ map('n', '<C-/>', [[:noh<CR>]], {})                               -- press "Ctrl
 
 -- Toggle nvim-tree
 map('n', '`', [[:NvimTreeFocus<CR>]], {})                         -- press "\" + "`" in normal mode to open/focus file explorer 
-map('n', '<leader>`', [[:NvimTreeFindFileToggle!<CR>]], {})       -- press "`" to toggle file explorer
+map('n', '<F2>', [[:NvimTreeFindFileToggle!<CR>]], {})            -- press "F2" to toggle file explorer
 
 -- Switch between buffer
 map('n', '<C-Left>', [[:bprevious<CR>]], {})                      -- press "Ctrl" + "<-" to move to previous buffer
@@ -34,3 +34,4 @@ map('n', '<C-d>', [[:bd<CR>]], {})                                -- press "Ctrl
 telescope_map('n', '<leader>t', [[:Telescope<CR>]], {})           -- press "\" + "t" to open Telescope and Lists available commands
 telescope_map('n', '<leader>f', builtin.find_files, {})           -- find file
 telescope_map('n', '<leader>g', builtin.live_grep, {})            -- find anything
+telescope_map('n', '<F3>', builtin.buffers, {})                    -- Press F3 to show buffers (= to file_explorer)
