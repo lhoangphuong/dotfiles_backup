@@ -3,6 +3,15 @@ local map = vim.api.nvim_set_keymap
 local telescope_map = vim.keymap.set
 local builtin = require('telescope.builtin')
 
+-- Highlight on yank
+vim.api.nvim_create_autocmd('TextYankPost', {
+	callback = function()
+		vim.highlight.on_yank()
+	end,
+	group = vim.api.nvim_create_augroup('YankHighlight', { clear = true }),
+	pattern = '*',
+})
+
 --[[
 Example:
 https://neovim.io/doc/user/api.html#nvim_set_keymap()
@@ -19,7 +28,7 @@ Parameters:
 map('n', '<C-/>', [[:noh<CR>]], {})                               -- press "Ctrl" + "/" to turn off last search hightlight
 
 -- Toggle nvim-tree
-map('n', '`', [[:NvimTreeFocus<CR>]], {})                         -- press "\" + "`" in normal mode to open/focus file explorer 
+-- map('n', '`', [[:NvimTreeFocus<CR>]], {})                         -- press "\" + "`" in normal mode to open/focus file explorer 
 map('n', '<F2>', [[:NvimTreeFindFileToggle!<CR>]], {})            -- press "F2" to toggle file explorer
 
 -- Switch between buffer
@@ -34,4 +43,6 @@ map('n', '<C-d>', [[:bd<CR>]], {})                                -- press "Ctrl
 telescope_map('n', '<leader>t', [[:Telescope<CR>]], {})           -- press "\" + "t" to open Telescope and Lists available commands
 telescope_map('n', '<leader>f', builtin.find_files, {})           -- find file
 telescope_map('n', '<leader>g', builtin.live_grep, {})            -- find anything
-telescope_map('n', '<F3>', builtin.buffers, {})                    -- Press F3 to show buffers (= to file_explorer)
+telescope_map('n', '<leader>`', builtin.buffers, {})               -- Press "\" + "`" to show buffers (= to file_explorer)
+
+map("n","`",":Telescope file_browser<CR>",{ noremap = true })

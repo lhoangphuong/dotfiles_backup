@@ -2,7 +2,6 @@
 require 'bootstrap.install_packer'
 require 'bootstrap.install_plugin'
 
-
 -- [ ~/.config/nvim/lua/plugin_configs ]
 require 'plugin_configs.theme'
 require 'plugin_configs.file_explorer'
